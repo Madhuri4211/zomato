@@ -28,7 +28,6 @@ function renderRestaurants(restaurants) {
     restaurantName.addEventListener('click', function() {
       const menuUrl = this.dataset.menuUrl;
       console.log(`Redirecting to ${menuUrl}`); // Debugging line to ensure menuUrl is set
-      alert(`Redirecting to ${menuUrl}`); // Add alert to ensure the click is registering
       window.location.href = menuUrl; // Redirect to menu_url on click
     });
 

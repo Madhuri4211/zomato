@@ -10,10 +10,10 @@ from fastapi.templating import Jinja2Templates
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
-app.mount("/frontend", StaticFiles(directory="frontend"), name="frontend")
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # Set up templates directory
-templates = Jinja2Templates(directory="frontend")
+templates = Jinja2Templates(directory="static")
 
 app.add_middleware(
     CORSMiddleware,
@@ -44,3 +44,8 @@ def read_restaurant(restaurant_id: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Restaurant not found")
     return restaurant
 
+@app.get("/", response_class=HTMLResponse)
+async def read_restaurants(request: Request):
+    db: Session = SessionLocal()
+    restaurants = crud.get_restaurants(db)
+    return templates.TemplateResponse("index.html", {"request": request, "restaurants": restaurants})

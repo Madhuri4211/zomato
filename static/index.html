@@ -25,13 +25,9 @@
       <input type="text" id="search" placeholder="Search for restaurant, cuisine or a dish">
     </div>
   </div>
-  
+
   <div class="restaurant-list" id="restaurant-list">
-    <ul>
-      {% for restaurant in restaurants %}
-      <li><a href="{{ restaurant.menu_url }}" target="_blank">{{ restaurant.restaurant_name }}</a></li>
-      {% endfor %}
-    </ul>
+    <!-- Restaurant items will be dynamically inserted here by JavaScript -->
   </div>
   <div class="pagination" id="pagination"></div>
 

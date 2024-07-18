@@ -11,7 +11,8 @@ def get_restaurants(db: Session, skip: int = 0, limit: int = 100):
         RestaurantBase(
             restaurant_name=r.restaurant_name,
             restaurant_id=r.restaurant_id,
-            featured_image=r.featured_image  # Include featured_image
+            featured_image=r.featured_image,
+            menu_url=r.menu_url  # Include menu_url here
         ) for r in restaurants
     ]
 

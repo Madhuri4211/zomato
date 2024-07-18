@@ -5,6 +5,7 @@ class RestaurantBase(BaseModel):
     restaurant_name: str
     restaurant_id: int
     featured_image: str
+    menu_url: str  # Include menu_url here
 
 class Restaurant(RestaurantBase):
     menu_url: str  # Include menu_url here for detailed view

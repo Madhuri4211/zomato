@@ -37,7 +37,7 @@ class Restaurant(Base):
     featured_image = Column(String(255))
     has_table_booking = Column(Boolean)
     zomato_id = Column(String(255))
-    menu_url = Column(String(255))
+    menu_url = Column(String(255))  # Include menu_url
     offers = Column(String(255))
     photos_url = Column(String(255))
     thumb = Column(String(255))
