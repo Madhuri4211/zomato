@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #f8f8f8;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  background-image: url('https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png');
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav1, .nav2 {
+  display: flex;
+}
+
+.nav1 > div, .nav2 > div {
+  margin: 0 10px;
+}
+
+.zomato {
+  font-size: 2em;
+  font-weight: bolder;
+  margin: 10px 0;
+}
+
+.discover {
+  font-size: 1.2em;
+}
+
+.search-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.search-container input {
+  width: 80%;
+  padding: 10px;
+  font-size: 1em;
+}
+
+.restaurant-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.restaurant-container {
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.restaurant-image {
+  width: 100%; /* Ensure the image takes the full width of the container */
+  height: 150px; /* Set a fixed height for all images */
+  object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+
+.restaurant-item {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.pagination {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.pagination button {
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}

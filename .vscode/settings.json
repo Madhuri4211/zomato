@@ -1,0 +1,19 @@
+{
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default",
+        "enableSsl": "Disabled"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "Madhuri",
+      "database": "zomato_db",
+      "username": "root",
+      "password": "system",
+      "connectionTimeout": 30
+    }
+  ]
+}

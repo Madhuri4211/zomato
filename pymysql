@@ -1,0 +1,24 @@
+import pymysql
+
+try:
+    # Replace with your actual connection parameters
+    connection = pymysql.connect(
+        host='localhost',
+        user='root',
+        password='system',
+        database='zomato',
+        port=3306,
+        cursorclass=pymysql.cursors.DictCursor
+    )
+
+    with connection.cursor() as cursor:
+        cursor.execute("SELECT VERSION()")
+        result = cursor.fetchone()
+        print("Database version:", result)
+
+except pymysql.Error as e:
+    print(f"Error connecting to MySQL: {e}")
+
+finally:
+    if connection:
+        connection.close()

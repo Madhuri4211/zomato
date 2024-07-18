@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Zomato.com</title>
+</head>
+<body>
+  <div class="header">
+    <nav class="navbar">
+      <div class="nav1">
+        <div class="app">Get the App</div>
+      </div>
+      <div class="nav2">
+        <div class="investor">Investor Relations</div>
+        <div class="add">Add Restaurant</div>
+        <div class="login">Log in</div>
+        <div class="signup">Sign Up</div>
+      </div>
+    </nav>
+    <div class="zomato">zomato</div>
+    <div class="discover">Discover the best food & drinks</div>
+    <div class="search-container">
+      <input type="text" id="search" placeholder="Search for restaurant, cuisine or a dish">
+    </div>
+  </div>
+  
+  <div class="restaurant-list" id="restaurant-list">
+    <ul>
+      {% for restaurant in restaurants %}
+      <li><a href="{{ restaurant.menu_url }}" target="_blank">{{ restaurant.restaurant_name }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="pagination" id="pagination"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
